@@ -1,14 +1,13 @@
 import { Button, Container, Box } from '@mui/material'
 import { Navbar } from '../components/navbar'
+import { Selector } from '../components/selector'
 
 const Home = () => {
   return (
     <>
     <Navbar />
     <Container>
-    <Button onClick={() => { console.log("hello world")}}>
-      <h1>click me</h1>
-    </Button>
+    <Selector />
     </Container>
     </>
   )
