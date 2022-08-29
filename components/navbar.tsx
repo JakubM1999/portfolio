@@ -14,21 +14,22 @@ export const Navbar = () => {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <AppBar position="static" sx={{ bgcolor: "white", width: "100%", p: 1 }}>
+      <AppBar elevation={0} position="static" sx={{ bgcolor: "white", p: 2, }}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <Box>
-            <Image src={logo} alt="logo" width="245" height="40" />
+            <Image src={logo} alt="logo" width="490" height="80" />
           </Box>
           <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
             <a href="https://www.linkedin.com/in/jakub-mierzejek/">
-              <LinkedInIcon sx={{ color: "black" }} />
+              <LinkedInIcon fontSize='large' sx={{ color: "black"}} />
             </a>
             <a href="https://www.github.com/jakubm1999">
-              <GitHubIcon sx={{ color: "black" }} />
+              <GitHubIcon fontSize='large' sx={{ color: "black" }} />
             </a>
             <Button
+              size="large"
               onClick={() => handleClick()}
-              sx={{ border: "solid 0.5px black", color: "black" }}
+              sx={{ border: "solid 0.5px black", color: "black"}}
             >
               Contact
             </Button>
