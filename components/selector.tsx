@@ -18,7 +18,7 @@ export const Selector = () => {
 
   
   return (
-    <Container>
+    <Container sx={{display:'flex', flexDirection: 'column',justifyContent:'center'}} >
       <Container>
         <Button sx={{ border: "solid 1px black", width: 136, color: "black" }}>
           <KeyboardArrowUpIcon sx={{ color: "black" }} />
