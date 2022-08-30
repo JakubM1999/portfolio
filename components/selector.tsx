@@ -1,61 +1,150 @@
-import { Button, Container, List, Typography } from "@mui/material";
-import { useState } from "react";
+import {
+  Button,
+  Container,
+  Typography,
+  Box
+} from "@mui/material";
+import { useState, useEffect } from "react";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { FC } from "react";
+// import { motion, MotionProps } from "framer-motion";
+// import styled from "styled-components";
 
 type Props = {
-  items: string[];
-  onSelect: (vaule: string) => void;
-  value: string;
+  setContent: any;
 };
 
-export const Selector = () => {
-  const [selected, setSelected] = useState("");
+export const Selector: FC<Props> = ({ setContent }) => {
+  const [selected, setSelected] = useState(2);
+  // const [change, setChange] = useState(false);
 
+  const options = [
+    "RECOMMENDATIONS",
+    "CV",
+    "ABOUT",
+    "PROJECTS",
+    "ILLUSTRATIONS",
+  ];
 
-  const handleSelecting = () => {};
+  useEffect(() => {
+    setContent(options[selected]);
+  });
 
-  
+  if (selected < 0) setSelected(options.length - 1);
+
+  if (selected >= options.length) setSelected(0);
   return (
-    <Container sx={{display:'flex', flexDirection: 'column',justifyContent:'center'}} >
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        gap: 3,
+        position: "fixed",
+        bottom: 0,
+        top: 0,
+      }}
+    >
       <Container>
-        <Button sx={{ border: "solid 1px black", width: 136, color: "black" }}>
+        <Button
+          onClick={() => {
+            setSelected(selected - 1);
+            // setChange(change)
+          }}
+          sx={{ border: "solid 1px black", width: 146, color: "black" }}
+        >
           <KeyboardArrowUpIcon sx={{ color: "black" }} />
         </Button>
       </Container>
 
-      <Container>
-        <li
-            value={selected}
-            onChange={(e) => {
-            const selectedItem = (e.target as HTMLInputElement).value;
-            setSelected(selectedItem);
+      <Container sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
+        <Typography
+          // variants={variantText}
+          // component={motion.p}
+          // className={(styles.change)}
+          // transition={{ delay:2 }}
+          // animate={{y: [selected - 2] || options[options.length + (selected - 2)]}}
+          sx={{
+            fontSize: "11px",
+            letterSpacing: 3,
+            fontWeight: "medium",
+            filter: "blur(1.5px)",
           }}
         >
-          <option value={"RECOMMENDATIONS"}>RECOMMENDATIONS</option>
-          <option value={"CV"}>CV</option>
-          <option selected value={"ABOUT"}>ABOUT</option>
-          <option value={"PROJECTS"}>PROJECTS</option>
-          <option value={"ILLUSTRATIONS"}>ILLUSTRATIONS</option>
-        </li>
+          {options[selected - 2] || options[options.length + (selected - 2)]}
+        </Typography>
+        <Typography
+          //  variants={variantText}
+          //  component={motion.p}
+          //  className={(styles.change)}
+          //  transition={{ delay:2 }}
+          //  animate={{y: [selected - 1] || options[options.length + (selected - 1)]}}
+          sx={{
+            fontSize: "14px",
+            letterSpacing: 3,
+            fontWeight: "medium",
+            filter: "blur(1px)",
+          }}
+        >
+          {options[selected - 1] || options[options.length + (selected - 1)]}
+        </Typography>
+        <Typography
+          //  variants={variantText}
+          //  component={motion.p}
+          //  className={(styles.change)}
+          //  transition={{ delay:2 }}
+          //  animate={{y: [selected]}}
+          sx={{
+            fontSize: "24px",
+            letterSpacing: 3,
+            fontWeight: "medium",
+          }}
+        >
+          {options[selected]}
+        </Typography>
+        <Typography
+          //  variants={variantText}
+          //  component={motion.p}
+          //  className={(styles.change)}
+          //  transition={{ ease: "easeOut", duration: 2 }}
+          //  animate={{ transition: change ? easing : easing}}
+          sx={{
+            fontSize: "14px",
+            letterSpacing: 3,
+            fontWeight: "medium",
+            filter: "blur(1px)",
+          }}
+        >
+          {options[selected + 1] || options[selected + 1 - options.length]}
+        </Typography>
+        <Typography
+          //  variants={variantText}
+          //  component={motion.p}
+          //  className={(styles.change)}
+          //  transition={{ ease: "easeOut", duration: 2 }}
+          //  animate={{ transition: change ? easing : easing}}
+          sx={{
+            fontSize: "11px",
+            letterSpacing: 3,
+            fontWeight: "medium",
+            filter: "blur(1.5px)",
+          }}
+        >
+          {options[selected + 2] || options[selected + 2 - options.length]}
+        </Typography>
       </Container>
-      
+
       <Container>
-        <Button sx={{ border: "solid 1px black", width: 136, color: "black" }}>
+        <Button
+          onClick={() => {
+            setSelected(selected + 1);
+          }}
+          sx={{ border: "solid 1px black", width: 146, color: "black" }}
+        >
           <KeyboardArrowDownIcon sx={{ color: "black" }} />
         </Button>
       </Container>
-      {selected}
-    </Container>
+    </Box>
   );
 };
-
-// const selectItems = [
-  //     {item: 'RECOMMENDATIONS'},
-  //     {item: 'CV'},
-  //     {item: 'ABOUT'},
-  //     {item: 'PROJECTS'},
-  //     {item: 'ILLUSTRATIONS'},
-  // ]
-  // const listItems = selectItems.map((items) => {return <Typography key={items.item}>{items.item}</Typography>})
