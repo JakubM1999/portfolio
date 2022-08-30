@@ -57,16 +57,17 @@ export const Selector: FC<Props> = ({ setContent }) => {
       <Container sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
         <Box>
           <Typography
+            variant='caption'
             // variants={variantText}
             // component={motion.p}
             // className={(styles.change)}
             // transition={{ delay:2 }}
             // animate={{y: [selected - 2] || options[options.length + (selected - 2)]}}
             sx={{
-              fontSize: "11px",
+              color:'#CDCDCD',
               letterSpacing: 3,
-              fontWeight: "medium",
               filter: "blur(1.5px)",
+              fontWeight: "700",
             }}
           >
             {options[selected - 2] || options[options.length + (selected - 2)]}
@@ -74,16 +75,17 @@ export const Selector: FC<Props> = ({ setContent }) => {
         </Box>
         <Box>
           <Typography
+          variant='body2'
             //  variants={variantText}
             //  component={motion.p}
             //  className={(styles.change)}
             //  transition={{ delay:2 }}
             //  animate={{y: [selected - 1] || options[options.length + (selected - 1)]}}
             sx={{
-              fontSize: "14px",
+              color:'#787878',
               letterSpacing: 3,
-              fontWeight: "medium",
               filter: "blur(1px)",
+              fontWeight: "700",
             }}
           >
             {options[selected - 1] || options[options.length + (selected - 1)]}
@@ -91,6 +93,7 @@ export const Selector: FC<Props> = ({ setContent }) => {
         </Box>
         <Box>
           <Typography
+          variant='body1'
             //  variants={variantText}
             //  component={motion.p}
             //  className={(styles.change)}
@@ -99,7 +102,7 @@ export const Selector: FC<Props> = ({ setContent }) => {
             sx={{
               fontSize: "24px",
               letterSpacing: 3,
-              fontWeight: "medium",
+              fontWeight: "700",
             }}
           >
             {options[selected]}
@@ -107,15 +110,16 @@ export const Selector: FC<Props> = ({ setContent }) => {
         </Box>
         <Box>
           <Typography
+          variant='body2'
             //  variants={variantText}
             //  component={motion.p}
             //  className={(styles.change)}
             //  transition={{ ease: "easeOut", duration: 2 }}
             //  animate={{ transition: change ? easing : easing}}
             sx={{
-              fontSize: "14px",
+              color:'#787878',
               letterSpacing: 3,
-              fontWeight: "medium",
+              fontWeight: "700",
               filter: "blur(1px)",
             }}
           >
@@ -124,15 +128,16 @@ export const Selector: FC<Props> = ({ setContent }) => {
         </Box>
         <Box>
           <Typography
+          variant='caption'
             //  variants={variantText}
             //  component={motion.p}
             //  className={(styles.change)}
             //  transition={{ ease: "easeOut", duration: 2 }}
             //  animate={{ transition: change ? easing : easing}}
             sx={{
-              fontSize: "11px",
+              color:'#CDCDCD',
               letterSpacing: 3,
-              fontWeight: "medium",
+              fontWeight: "700",
               filter: "blur(1.5px)",
             }}
           >

@@ -20,10 +20,10 @@ export const About = () => {
                alt="me"
                />
       </Box>
-      <Container sx={{display:'flex', flexDirection:'column', gap: 2, minWidth:'300px', mr:20}}>
-      <h2>About</h2>
-      <Box sx={{width:'100%'}}>
-        <Typography sx={{fontSize:16}}>
+      <Container sx={{display:'flex', flexDirection:'column', gap: 5, minWidth:'300px', mr:20}}>
+      <Box sx={{width:'80vh'}}>
+        <Typography variant='h1'>About</Typography>
+        <Typography variant='body1'>
           My career started as I wanted to become graphic designer since from
           young age I was good at drawing, I was very motivated after first
           semester of graphic design to learn more so I applied to couple of
@@ -37,8 +37,8 @@ export const About = () => {
           canvas(Strigamyndir).
           </Typography>
           </Box>
-          <Box sx={{width:'100%'}}>
-          <Typography sx={{fontSize:16}}>
+          <Box sx={{width:'80vh'}}>
+          <Typography variant='body1'>
           Pixel gave me opportunity when the pandemic
           started to finish my contract which was required in order to finish my
           degree as a graphic designer (Sveinspróf) which then allowed me to
@@ -50,8 +50,8 @@ export const About = () => {
           experience) as well as some basics of backend development.
           </Typography>
           </Box>
-          <Box sx={{width:'100%'}}>
-          <Typography sx={{fontSize:16}}>
+          <Box sx={{width:'80vh'}}>
+          <Typography variant='body1'>
           As part of education in Vefskóli the last project is the internship in a company
           that I and other students choose as a client for whom we would create
           a real project and experience how it is to work in a real environment.

@@ -1,13 +1,14 @@
-import { Button, Container, Box } from '@mui/material'
-// import { Navbar } from '../components/navbar'
-// import { Selector } from '../components/selector'
+import { ThemeProvider, responsiveFontSizes, createTheme } from '@mui/material'
 import { Layout } from '../components/layout'
+
+let theme = createTheme();
+theme = responsiveFontSizes(theme);
 
 const Home = () => {
   return (
-    <>
+    <ThemeProvider theme={theme}>
     <Layout />
-    </>
+    </ThemeProvider>
   )
 }
 
