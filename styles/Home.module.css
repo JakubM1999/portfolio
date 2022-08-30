@@ -127,3 +127,7 @@
     filter: invert(1);
   }
 }
+
+.change{
+  transition: 0.2s ease-in-out;
+}
