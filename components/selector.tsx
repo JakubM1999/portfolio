@@ -1,9 +1,4 @@
-import {
-  Button,
-  Container,
-  Typography,
-  Box
-} from "@mui/material";
+import { Button, Container, Typography, Box } from "@mui/material";
 import { useState, useEffect } from "react";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -42,7 +37,7 @@ export const Selector: FC<Props> = ({ setContent }) => {
         justifyContent: "center",
         gap: 3,
         position: "fixed",
-        width: 300,
+        width: "30vh",
         bottom: 0,
         top: 0,
       }}
@@ -53,87 +48,97 @@ export const Selector: FC<Props> = ({ setContent }) => {
             setSelected(selected - 1);
             // setChange(change)
           }}
-          sx={{ border: "solid 1px black", width: 146, color: "black" }}
+          sx={{ border: "solid 1px black", width: "11vh", color: "black" }}
         >
           <KeyboardArrowUpIcon sx={{ color: "black" }} />
         </Button>
       </Container>
 
       <Container sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
-        <Typography
-          // variants={variantText}
-          // component={motion.p}
-          // className={(styles.change)}
-          // transition={{ delay:2 }}
-          // animate={{y: [selected - 2] || options[options.length + (selected - 2)]}}
-          sx={{
-            fontSize: "11px",
-            letterSpacing: 3,
-            fontWeight: "medium",
-            filter: "blur(1.5px)",
-          }}
-        >
-          {options[selected - 2] || options[options.length + (selected - 2)]}
-        </Typography>
-        <Typography
-          //  variants={variantText}
-          //  component={motion.p}
-          //  className={(styles.change)}
-          //  transition={{ delay:2 }}
-          //  animate={{y: [selected - 1] || options[options.length + (selected - 1)]}}
-          sx={{
-            fontSize: "14px",
-            letterSpacing: 3,
-            fontWeight: "medium",
-            filter: "blur(1px)",
-          }}
-        >
-          {options[selected - 1] || options[options.length + (selected - 1)]}
-        </Typography>
-        <Typography
-          //  variants={variantText}
-          //  component={motion.p}
-          //  className={(styles.change)}
-          //  transition={{ delay:2 }}
-          //  animate={{y: [selected]}}
-          sx={{
-            fontSize: "24px",
-            letterSpacing: 3,
-            fontWeight: "medium",
-          }}
-        >
-          {options[selected]}
-        </Typography>
-        <Typography
-          //  variants={variantText}
-          //  component={motion.p}
-          //  className={(styles.change)}
-          //  transition={{ ease: "easeOut", duration: 2 }}
-          //  animate={{ transition: change ? easing : easing}}
-          sx={{
-            fontSize: "14px",
-            letterSpacing: 3,
-            fontWeight: "medium",
-            filter: "blur(1px)",
-          }}
-        >
-          {options[selected + 1] || options[selected + 1 - options.length]}
-        </Typography>
-        <Typography
-          //  variants={variantText}
-          //  component={motion.p}
-          //  className={(styles.change)}
-          //  transition={{ ease: "easeOut", duration: 2 }}
-          //  animate={{ transition: change ? easing : easing}}
-          sx={{
-            fontSize: "11px",
-            letterSpacing: 3,
-            fontWeight: "medium",
-            filter: "blur(1.5px)",
-          }}
-        >
-          {options[selected + 2] || options[selected + 2 - options.length]}
-        </Typography>
+        <Box>
+          <Typography
+            // variants={variantText}
+            // component={motion.p}
+            // className={(styles.change)}
+            // transition={{ delay:2 }}
+            // animate={{y: [selected - 2] || options[options.length + (selected - 2)]}}
+            sx={{
+              fontSize: "11px",
+              letterSpacing: 3,
+              fontWeight: "medium",
+              filter: "blur(1.5px)",
+            }}
+          >
+            {options[selected - 2] || options[options.length + (selected - 2)]}
+          </Typography>
+        </Box>
+        <Box>
+          <Typography
+            //  variants={variantText}
+            //  component={motion.p}
+            //  className={(styles.change)}
+            //  transition={{ delay:2 }}
+            //  animate={{y: [selected - 1] || options[options.length + (selected - 1)]}}
+            sx={{
+              fontSize: "14px",
+              letterSpacing: 3,
+              fontWeight: "medium",
+              filter: "blur(1px)",
+            }}
+          >
+            {options[selected - 1] || options[options.length + (selected - 1)]}
+          </Typography>
+        </Box>
+        <Box>
+          <Typography
+            //  variants={variantText}
+            //  component={motion.p}
+            //  className={(styles.change)}
+            //  transition={{ delay:2 }}
+            //  animate={{y: [selected]}}
+            sx={{
+              fontSize: "24px",
+              letterSpacing: 3,
+              fontWeight: "medium",
+            }}
+          >
+            {options[selected]}
+          </Typography>
+        </Box>
+        <Box>
+          <Typography
+            //  variants={variantText}
+            //  component={motion.p}
+            //  className={(styles.change)}
+            //  transition={{ ease: "easeOut", duration: 2 }}
+            //  animate={{ transition: change ? easing : easing}}
+            sx={{
+              fontSize: "14px",
+              letterSpacing: 3,
+              fontWeight: "medium",
+              filter: "blur(1px)",
+            }}
+          >
+            {options[selected + 1] || options[selected + 1 - options.length]}
+          </Typography>
+        </Box>
+        <Box>
+          <Typography
+            //  variants={variantText}
+            //  component={motion.p}
+            //  className={(styles.change)}
+            //  transition={{ ease: "easeOut", duration: 2 }}
+            //  animate={{ transition: change ? easing : easing}}
+            sx={{
+              fontSize: "11px",
+              letterSpacing: 3,
+              fontWeight: "medium",
+              filter: "blur(1.5px)",
+            }}
+          >
+            {options[selected + 2] || options[selected + 2 - options.length]}
+          </Typography>
+        </Box>
       </Container>
 
       <Container>
@@ -141,7 +146,7 @@ export const Selector: FC<Props> = ({ setContent }) => {
           onClick={() => {
             setSelected(selected + 1);
           }}
-          sx={{ border: "solid 1px black", width: 146, color: "black" }}
+          sx={{ border: "solid 1px black", width: "11vh", color: "black" }}
         >
           <KeyboardArrowDownIcon sx={{ color: "black" }} />
         </Button>

@@ -10,22 +10,20 @@ export const About = () => {
         display: "flex",
         flexDirection: "row",
         justifyContent:'center',
-        alignItems: "center",
-        alignSelf:'flex-end',
-        gap:15
+        alignItems:'center',
+        gap:7
       }}
     >
-      <Box sx={{justifyContent:'center', width:535, height:'auto'}}>
+      <Box sx={{justifyContent:'center', width: '47%', alignContent:'end',}}>
         <Image src={Me}
                priority
-               layout="responsive"
                alt="me"
                />
       </Box>
-      <Container sx={{display:'flex', flexDirection:'column', gap: 3, width:'700px', mr:20}}>
-      <h1>About</h1>
-        <Typography sx={{fontSize:16 }}>
-          
+      <Container sx={{display:'flex', flexDirection:'column', gap: 2, minWidth:'300px', mr:20}}>
+      <h2>About</h2>
+      <Box sx={{width:'100%'}}>
+        <Typography sx={{fontSize:16}}>
           My career started as I wanted to become graphic designer since from
           young age I was good at drawing, I was very motivated after first
           semester of graphic design to learn more so I applied to couple of
@@ -38,6 +36,8 @@ export const About = () => {
           a need, I was also doing a bit of handy tasks like putting photos on a
           canvas(Strigamyndir).
           </Typography>
+          </Box>
+          <Box sx={{width:'100%'}}>
           <Typography sx={{fontSize:16}}>
           Pixel gave me opportunity when the pandemic
           started to finish my contract which was required in order to finish my
@@ -49,6 +49,8 @@ export const About = () => {
           Figma (which I was familiar with because of my graphic design
           experience) as well as some basics of backend development.
           </Typography>
+          </Box>
+          <Box sx={{width:'100%'}}>
           <Typography sx={{fontSize:16}}>
           As part of education in Vefskóli the last project is the internship in a company
           that I and other students choose as a client for whom we would create
@@ -59,6 +61,7 @@ export const About = () => {
           was very educational for me and motivated me to continue develop
           myself and my skill.
           </Typography>
+          </Box>
       </Container>
     </Box>
   );

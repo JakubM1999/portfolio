@@ -16,8 +16,8 @@ export const Navbar = () => {
     <Box sx={{ display: "flex" }}>
       <AppBar elevation={0} position="static" sx={{ bgcolor: "white", p: 2, }}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Box>
-            <Image src={logo} alt="logo" width="490" height="80" />
+          <Box sx={{width:'30vh', height:'auto'}}>
+            <Image src={logo} alt="logo"/>
           </Box>
           <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
             <a href="https://www.linkedin.com/in/jakub-mierzejek/">
