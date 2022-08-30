@@ -42,6 +42,7 @@ export const Selector: FC<Props> = ({ setContent }) => {
         justifyContent: "center",
         gap: 3,
         position: "fixed",
+        width: 300,
         bottom: 0,
         top: 0,
       }}
