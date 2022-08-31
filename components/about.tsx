@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Box, Typography } from "@mui/material";
-import Me from "../images/me.png";
+import Me from "../images/ProjectCardImgs/me.png";
 import Image from "next/image";
 
 export const About = () => {
@@ -22,7 +22,7 @@ export const About = () => {
       </Box>
       <Container sx={{display:'flex', flexDirection:'column', gap: 5, minWidth:'300px'}}>
       <Box sx={{width:'80vh'}}>
-        <Typography variant='h2'>About Me</Typography>
+        <Typography variant='h2'>Hey</Typography>
         <Typography variant='body2'>
           My career started as I wanted to become graphic designer since from
           young age I was good at drawing, I was very motivated after first

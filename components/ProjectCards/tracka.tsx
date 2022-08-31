@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 
 //IMAGE
-import trackaImg from "../../images/tracka.png";
+import trackaImg from "../../images/ProjectCardImgs/tracka.png";
 
 const CardContainer = styled(Button)`
   & {
