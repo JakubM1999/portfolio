@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 
 //IMAGE
-import cssbasicsImg from "../../images/cssbasics.png";
+import cssbasicsImg from "../../images/ProjectCardImgs/cssbasics.png";
 
 
 const CardContainer = styled(Button)`

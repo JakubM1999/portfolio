@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 
 //IMAGE
-import fræImg from "../../images/fræ.png";
+import fræImg from "../../images/ProjectCardImgs/fræ.png";
 
 
 const CardContainer = styled(Button)`
