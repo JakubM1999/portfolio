@@ -11,7 +11,7 @@ type Props = {
 };
 
 export const Selector: FC<Props> = ({ setContent }) => {
-  const [selected, setSelected] = useState(2);
+  const [selected, setSelected] = useState(3);
   // const [change, setChange] = useState(false);
 
   const options = [
