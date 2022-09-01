@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Box, Typography } from "@mui/material";
-import Me from '../images/ProjectCardImgs/me.png'
+import Me from '../images/me.png'
 import Image from "next/image";
 
 export const About = () => {

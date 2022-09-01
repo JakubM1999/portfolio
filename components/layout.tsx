@@ -6,6 +6,7 @@ import { Grid, Container, Box } from '@mui/material'
 import {useState} from 'react'
 import { About } from './about'
 import { Projects } from './projects'
+import { Cv } from "./cv"
 
 export const Layout = () => {
     const [content, setContent] = useState('ABOUT');
@@ -25,6 +26,7 @@ export const Layout = () => {
             <Box sx={{minHeight:'auto'}}>
                     {content === 'ABOUT' && <About />}
                     {content === 'PROJECTS' && <Projects />}
+                    {content === 'CV' && <Cv />}
             </Box>
             </Grid>
         </Grid>
