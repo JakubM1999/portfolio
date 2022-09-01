@@ -4,10 +4,10 @@ import { Typography, Button, Box } from "@mui/material";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 //IMAGE
 import reactnativebasicsImg from "../../images/ProjectCardImgs/reactnativebasics.png";
-
 
 const CardContainer = styled(Button)`
   & {
@@ -22,34 +22,47 @@ const CardContainer = styled(Button)`
   }
 `;
 
+const secondColumnAnim = {
+  before: {
+    opacity: 0,
+    x: -420,
+  },
+  after: {
+    opacity: 1,
+    x: 0,
+  },
+};
 
 export const ReactNativeBasicsCard = () => {
+  const Router = useRouter();
 
-    const Router = useRouter();
-
-    return (
-       <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            color: "#7A7A7A",
-            gap: 1,
-          }}
-        >
-          <CardContainer
-            onClick={() => {
-              Router.push("./projects/reactnativebasics");
-            }}
-          >
-            <Image alt="tracka app" src={reactnativebasicsImg} />
-          </CardContainer>
-          <Typography
-            variant="body2"
-            sx={{ textAlign: "center", letterSpacing: "2px" }}
-          >
-            FRONT-END
-          </Typography>
-        </Box>
-    )
-}
+  return (
+    <Box
+      initial={secondColumnAnim.before}
+      animate={secondColumnAnim.after}
+      transition={{ delay: 0.2 }}
+      component={motion.div}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        color: "#7A7A7A",
+        gap: 1,
+      }}
+    >
+      <CardContainer
+        onClick={() => {
+          Router.push("./projects/reactnativebasics");
+        }}
+      >
+        <Image alt="tracka app" src={reactnativebasicsImg} />
+      </CardContainer>
+      <Typography
+        variant="body2"
+        sx={{ textAlign: "center", letterSpacing: "2px" }}
+      >
+        FRONT-END
+      </Typography>
+    </Box>
+  );
+};
