@@ -2,27 +2,40 @@ import React from "react";
 import { Container, Box, Typography } from "@mui/material";
 import Me from '../images/me.png'
 import Image from "next/image";
+import { motion } from 'framer-motion'
+
+const animation = {
+  before: {
+    opacity: 0,
+    y: -50,
+  },
+  after: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 export const About = () => {
   return (
     <Box
+    initial={animation.before}
+      animate={animation.after}
+      component={motion.div}
       sx={{
         display: "flex",
         flexDirection: "row",
         justifyContent:'center',
         alignItems:'center',
-        gap:7
       }}
     >
-      <Box sx={{justifyContent:'center', maxWidth: '28%', alignContent:'end',}}>
+      <Box sx={{justifyContent:'center', maxWidth: '28%', alignSelf:'end',mt:2}}>
         <Image src={Me}
                priority
                alt="me"
                />
       </Box>
-      <Container sx={{display:'flex', flexDirection:'column', gap: 5, minWidth:'300px'}}>
-      <Box sx={{width:'80vh'}}>
-        <Typography variant='h2'>Hey</Typography>
+      <Container sx={{display:'flex', flexDirection:'column', gap: 1.5, width:'70vh', mb:3}}>
+        <Typography variant='h3'>Hey</Typography>
         <Typography variant='body2'>
           My career started as I wanted to become graphic designer since from
           young age I was good at drawing, I was very motivated after first
@@ -36,8 +49,7 @@ export const About = () => {
           a need, I was also doing a bit of handy tasks like putting photos on a
           canvas(Strigamyndir).
           </Typography>
-          </Box>
-          <Box sx={{width:'80vh'}}>
+
           <Typography variant='body2'>
           Pixel gave me opportunity when the pandemic
           started to finish my contract which was required in order to finish my
@@ -49,8 +61,7 @@ export const About = () => {
           Figma (which I was familiar with because of my graphic design
           experience) as well as some basics of backend development.
           </Typography>
-          </Box>
-          <Box sx={{width:'80vh'}}>
+
           <Typography variant='body2'>
           As part of education in Vefskóli the last project is the internship in a company
           that I and other students choose as a client for whom we would create
@@ -61,7 +72,6 @@ export const About = () => {
           was very educational for me and motivated me to continue develop
           myself and my skill.
           </Typography>
-          </Box>
       </Container>
     </Box>
   );
