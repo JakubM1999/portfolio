@@ -58,8 +58,7 @@ export const JsBasicsCard = () => {
         <Image alt="tracka app" src={jsbasicsImg} />
       </CardContainer>
       <Typography
-        variant="body2"
-        sx={{ textAlign: "center", letterSpacing: "2px" }}
+        sx={{ textAlign: "center", letterSpacing: "2px", fontSize:{lg:'17px', sm:'12px'}}}
       >
         FRONT-END
       </Typography>

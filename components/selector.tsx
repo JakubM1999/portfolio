@@ -48,26 +48,26 @@ export const Selector: FC<Props> = ({ setContent }) => {
             setSelected(selected - 1);
             // setChange(change)
           }}
-          sx={{ border: "solid 1px black", width: "11vh", color: "black" }}
+          sx={{ border: "solid 1px black", width: "14vh", color: "black" }}
         >
           <KeyboardArrowUpIcon sx={{ color: "black" }} />
         </Button>
       </Container>
 
-      <Container sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
+      <Container sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
         <Box>
           <Typography
-            variant='caption'
             // variants={variantText}
             // component={motion.p}
             // className={(styles.change)}
             // transition={{ delay:2 }}
             // animate={{y: [selected - 2] || options[options.length + (selected - 2)]}}
             sx={{
-              color:'#CDCDCD',
-              letterSpacing: 3,
               filter: "blur(1.5px)",
-              fontWeight: "700",
+              color:'#CDCDCD',
+              fontSize: { lg:12, sm:7 },
+              letterSpacing: 3,
+              fontWeight: "500",  
             }}
           >
             {options[selected - 2] || options[options.length + (selected - 2)]}
@@ -75,17 +75,17 @@ export const Selector: FC<Props> = ({ setContent }) => {
         </Box>
         <Box>
           <Typography
-          variant='body2'
             //  variants={variantText}
             //  component={motion.p}
             //  className={(styles.change)}
             //  transition={{ delay:2 }}
             //  animate={{y: [selected - 1] || options[options.length + (selected - 1)]}}
             sx={{
-              color:'#787878',
-              letterSpacing: 3,
               filter: "blur(1px)",
-              fontWeight: "700",
+              color:'#787878',
+              fontSize: { lg:17, sm:9 },
+              letterSpacing: 3,
+              fontWeight: "600",  
             }}
           >
             {options[selected - 1] || options[options.length + (selected - 1)]}
@@ -93,16 +93,15 @@ export const Selector: FC<Props> = ({ setContent }) => {
         </Box>
         <Box>
           <Typography
-          variant='body1'
             //  variants={variantText}
             //  component={motion.p}
             //  className={(styles.change)}
             //  transition={{ delay:2 }}
             //  animate={{y: [selected]}}
             sx={{
-              fontSize: "24px",
-              letterSpacing: 3,
-              fontWeight: "700",
+                fontSize: { lg:22, sm:16 },
+                letterSpacing: 3,
+                fontWeight: "700",  
             }}
           >
             {options[selected]}
@@ -110,17 +109,17 @@ export const Selector: FC<Props> = ({ setContent }) => {
         </Box>
         <Box>
           <Typography
-          variant='body2'
             //  variants={variantText}
             //  component={motion.p}
             //  className={(styles.change)}
             //  transition={{ ease: "easeOut", duration: 2 }}
             //  animate={{ transition: change ? easing : easing}}
             sx={{
-              color:'#787878',
-              letterSpacing: 3,
-              fontWeight: "700",
               filter: "blur(1px)",
+              color:'#787878',
+              fontSize: { lg:17, sm:9 },
+              letterSpacing: 3,
+              fontWeight: "600",  
             }}
           >
             {options[selected + 1] || options[selected + 1 - options.length]}
@@ -128,17 +127,17 @@ export const Selector: FC<Props> = ({ setContent }) => {
         </Box>
         <Box>
           <Typography
-          variant='caption'
             //  variants={variantText}
             //  component={motion.p}
             //  className={(styles.change)}
             //  transition={{ ease: "easeOut", duration: 2 }}
             //  animate={{ transition: change ? easing : easing}}
             sx={{
-              color:'#CDCDCD',
-              letterSpacing: 3,
-              fontWeight: "700",
               filter: "blur(1.5px)",
+              color:'#CDCDCD',
+              fontSize: { lg:12, sm:7 },
+              letterSpacing: 3,
+              fontWeight: "500",  
             }}
           >
             {options[selected + 2] || options[selected + 2 - options.length]}
@@ -151,7 +150,7 @@ export const Selector: FC<Props> = ({ setContent }) => {
           onClick={() => {
             setSelected(selected + 1);
           }}
-          sx={{ border: "solid 1px black", width: "11vh", color: "black" }}
+          sx={{ border: "solid 1px black", width: "14vh", color: "black" }}
         >
           <KeyboardArrowDownIcon sx={{ color: "black" }} />
         </Button>

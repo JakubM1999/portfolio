@@ -88,8 +88,8 @@ export const Navbar = () => {
             <Box
               component={motion.div}
               transition={{ delay: 1 }}
-              initial={animLinks.icon2.before}
-              animate={animLinks.icon2.after}
+              initial={animLinks.button.before}
+              animate={animLinks.button.after}
             >
               <Button
                 size="large"

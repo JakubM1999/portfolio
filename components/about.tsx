@@ -28,15 +28,15 @@ export const About = () => {
         alignItems:'center',
       }}
     >
-      <Box sx={{justifyContent:'center', maxWidth: '28%', alignSelf:'end',mt:2}}>
+      <Box sx={{justifyContent:'center', width: '27.5%', alignSelf:'end',mt:4}}>
         <Image src={Me}
                priority
                alt="me"
                />
       </Box>
       <Container sx={{display:'flex', flexDirection:'column', gap: 1.5, width:'70vh', mb:3}}>
-        <Typography variant='h3'>Hey</Typography>
-        <Typography variant='body2'>
+        <Typography sx={{fontSize:{lg:'3.5rem', sm:'2rem'}}} >Hey</Typography>
+        <Typography color='grey.800' sx={{fontSize:{lg:'18px', sm:'11px'}}} >
           My career started as I wanted to become graphic designer since from
           young age I was good at drawing, I was very motivated after first
           semester of graphic design to learn more so I applied to couple of
@@ -50,7 +50,7 @@ export const About = () => {
           canvas(Strigamyndir).
           </Typography>
 
-          <Typography variant='body2'>
+          <Typography color='grey.800'  sx={{fontSize:{lg:'18px', sm:'11px'}}}>
           Pixel gave me opportunity when the pandemic
           started to finish my contract which was required in order to finish my
           degree as a graphic designer (Sveinspróf) which then allowed me to
@@ -62,7 +62,7 @@ export const About = () => {
           experience) as well as some basics of backend development.
           </Typography>
 
-          <Typography variant='body2'>
+          <Typography color='grey.800'  sx={{fontSize:{lg:'18px', sm:'11px'}}}>
           As part of education in Vefskóli the last project is the internship in a company
           that I and other students choose as a client for whom we would create
           a real project and experience how it is to work in a real environment.

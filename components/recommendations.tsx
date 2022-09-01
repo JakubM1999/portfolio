@@ -1,11 +1,9 @@
 import React from "react"
 
-const Fræ = () => {
+export const Recommendations = () => {
     return (
         <div>
-            hello Fræ
+            yo
         </div>
     )
-}
-
-export default Fræ
+} 
