@@ -58,10 +58,9 @@ export const HangryCard = () => {
         <Image alt="tracka app" src={hangryImg} />
       </CardContainer>
       <Typography
-        variant="body2"
-        sx={{ textAlign: "center", letterSpacing: "2px" }}
+        sx={{ textAlign: "center", letterSpacing: "2px", fontSize:{lg:'17px', sm:'12px'} }}
       >
-        FRONT-END
+        FRONT-END & DESIGN
       </Typography>
     </Box>
   );

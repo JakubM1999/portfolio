@@ -58,8 +58,7 @@ export const PortfolioCard = () => {
         <Image alt="tracka app" src={portfolioImg} />
       </CardContainer>
       <Typography
-        variant="body2"
-        sx={{ textAlign: "center", letterSpacing: "2px" }}
+        sx={{ textAlign: "center", letterSpacing: "2px", fontSize:{lg:'17px', sm:'12px'} }}
       >
         FRONT-END & DESIGN
       </Typography>

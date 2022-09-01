@@ -7,6 +7,7 @@ import {useState} from 'react'
 import { About } from './about'
 import { Projects } from './projects'
 import { Cv } from "./cv"
+import { Recommendations } from "./recommendations"
 
 export const Layout = () => {
     const [content, setContent] = useState('ABOUT');
@@ -27,6 +28,7 @@ export const Layout = () => {
                     {content === 'ABOUT' && <About />}
                     {content === 'PROJECTS' && <Projects />}
                     {content === 'CV' && <Cv />}
+                    {content === 'RECOMMENDATIONS' && <Recommendations />}
             </Box>
             </Grid>
         </Grid>

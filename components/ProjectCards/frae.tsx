@@ -7,7 +7,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 //IMAGE
-import fræImg from "../../images/ProjectCardImgs/fræ.png";
+import fraeImg from "../../images/ProjectCardImgs/fræ.png";
 
 const CardContainer = styled(Button)`
   & {
@@ -33,7 +33,7 @@ const firstColumnAnim = {
   },
 };
 
-export const FræCard = () => {
+export const FraeCard = () => {
   const Router = useRouter();
 
   return (
@@ -51,16 +51,15 @@ export const FræCard = () => {
     >
       <CardContainer
         onClick={() => {
-          Router.push("./projects/fræ");
+          Router.push("./projects/frae");
         }}
       >
-        <Image alt="tracka app" src={fræImg} />
+        <Image alt="tracka app" src={fraeImg} />
       </CardContainer>
       <Typography
-        variant="body2"
-        sx={{ textAlign: "center", letterSpacing: "2px" }}
+        sx={{ textAlign: "center", letterSpacing: "2px", fontSize:{lg:'17px', sm:'12px'} }}
       >
-        FRONT-END
+        DESIGN
       </Typography>
     </Box>
   );

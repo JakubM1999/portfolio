@@ -1,12 +1,12 @@
 //FUNCTIONALITY
 import React from "react";
-import { Container, Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 
 //CARDS
 import { TrackaCard } from './ProjectCards/tracka'
 import { PortfolioCard } from "./ProjectCards/portfolio";
 import { EverBladeCard } from "./ProjectCards/everblade";
-import { FræCard } from "./ProjectCards/fræ";
+import { FraeCard } from "./ProjectCards/frae";
 import { CssBasicsCard } from "./ProjectCards/cssbasics";
 import { JsBasicsCard } from "./ProjectCards/jsbasics";
 import { HtmlBasicsCard } from "./ProjectCards/htmlbasics";
@@ -21,34 +21,33 @@ export const Projects = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        gap: 15,
-        mb: 20,
+        gap: 10,
+        mb: 10,
         mt: 20,
-        justifyContent: "center",
-        width: "120vh",
+        justifyContent:'center'
       }}
     >
-      <Container sx={{ display: "flex", gap: 15, justifyContent: "center" }}>
+      <Box sx={{ display: "flex",width:'110vh', gap:15, justifyContent: "center" }}>
         
         <TrackaCard />
        <PortfolioCard />
         <EverBladeCard />
 
-      </Container>
+      </Box>
 
-      <Container sx={{ display: "flex", gap: 15, justifyContent: "center" }}>
+      <Box sx={{ display: "flex",width:'110vh', gap:15, justifyContent: "center" }}>
 
-        <FræCard />
+        <FraeCard />
         <CssBasicsCard />
         <JsBasicsCard />
 
-      </Container>
+      </Box>
 
-      <Container sx={{ display: "flex", gap: 15, justifyContent: "center" }}>
+      <Box sx={{ display: "flex",width:'110vh', gap:15, justifyContent: "center" }}>
         <HtmlBasicsCard />
         <ReactNativeBasicsCard />
         <HangryCard />
-      </Container>
+      </Box>
     </Box>
   );
 };
