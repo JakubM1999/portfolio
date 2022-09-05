@@ -99,7 +99,7 @@ export const SmariRecommendation = () => {
               fontWeight: 100,
             }}
           >
-            Jakob studied at Vefskólinn in 2021 to 2022 and was active in his
+            Jakub studied at Vefskólinn in 2021 to 2022 and was active in his
             studies the whole time. It was nice to have him as a student since
             he was not afraid to ask for help whenever needed (a rear but
             important skill to have).
