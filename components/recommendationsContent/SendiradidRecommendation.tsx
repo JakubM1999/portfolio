@@ -43,7 +43,6 @@ export const SendiradidRecommendation = () => {
             src="https://github.com/JakubM1999/portfolio/blob/main/images/sendiradid.png?raw=true"
           />
           <Box
-          transition={{delay: 0.1}}
           component={motion.div}
           initial={titleAnim.before}
           animate={titleAnim.after}>

@@ -52,7 +52,7 @@ export const EverBladeCard = () => {
     >
       <CardContainer
         onClick={() => {
-          Router.push("./projects/everbalde");
+          Router.push("./projects/everblade");
         }}
       >
         <Image alt="tracka app" src={everbladeImg} />

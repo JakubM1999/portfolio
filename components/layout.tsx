@@ -1,16 +1,16 @@
 import React from "react"
-import { FC } from "react"
 import { Navbar } from './navbar'
 import { Selector } from './selector' 
-import { Grid, Container, Box } from '@mui/material'
+import { Grid, Box } from '@mui/material'
 import {useState} from 'react'
 import { About } from './about'
 import { Projects } from './projects'
 import { Cv } from "./cv"
 import { Recommendations } from "./recommendations"
+import { Illustrations } from "./illustrations"
 
 export const Layout = () => {
-    const [content, setContent] = useState('RECOMMENDATIONS');
+    const [content, setContent] = useState('ILLUSTRATIONS');
 
     return (
         <Grid container item xs={12} >
@@ -29,6 +29,7 @@ export const Layout = () => {
                     {content === 'PROJECTS' && <Projects />}
                     {content === 'CV' && <Cv />}
                     {content === 'RECOMMENDATIONS' && <Recommendations />}
+                    {content === 'ILLUSTRATIONS' && <Illustrations />}
             </Box>
             </Grid>
         </Grid>
