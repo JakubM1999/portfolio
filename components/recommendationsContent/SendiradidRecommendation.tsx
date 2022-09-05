@@ -1,15 +1,52 @@
 import React from 'react'
 import {Avatar, Grid, Box, Typography} from '@mui/material'
+import { motion } from 'framer-motion'
+
+const avatarAnim = {
+    before: {
+        opacity:0,
+    },
+    after: {
+        opacity:1,
+    }
+}
+
+const titleAnim = {
+    before: {
+        opacity:0,
+        x:-50
+    },
+    after: {
+        opacity:1,
+        x:0
+    }
+}
+
+const textAnim = {
+    before: {
+        opacity: 0,
+    },
+    after: {
+        opacity:1,
+    }
+}
 
 export const SendiradidRecommendation = () => {
     return (
         <Grid container xs={12}>
         <Grid container item sx={{ alignItems: "center", gap: 3 }}>
           <Avatar
+          component={motion.div}
+          initial={avatarAnim.before}
+          animate={avatarAnim.after}
             sx={{ width: "8vh", height: "auto" }}
             src="https://github.com/JakubM1999/portfolio/blob/main/images/sendiradid.png?raw=true"
           />
-          <Box>
+          <Box
+          transition={{delay: 0.1}}
+          component={motion.div}
+          initial={titleAnim.before}
+          animate={titleAnim.after}>
             <Typography
               sx={{
                 fontSize: { lg: 25, sm: 17 },
@@ -28,6 +65,10 @@ export const SendiradidRecommendation = () => {
           </Box>
         </Grid>
         <Grid
+        transition={{ delay: 0.4}}
+        component={motion.div}
+        initial={textAnim.before}
+        animate={textAnim.after}
           item
           xs={8}
           sx={{
