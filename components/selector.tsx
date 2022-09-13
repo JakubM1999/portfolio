@@ -19,12 +19,14 @@ const textVariants = {
     color:'#787878',
   },
   current: {
-
+    filter: "blur(0px)",
+    color:'black',
   }
 }
 
 export const Selector: FC<Props> = ({ setContent }) => {
-  const [selected, setSelected] = useState(4);
+  const [selected, setSelected] = useState(2);
+  const [choice, setChoice] = useState(textVariants.last);
   
   const options = [
     "RECOMMENDATIONS",
@@ -41,6 +43,7 @@ export const Selector: FC<Props> = ({ setContent }) => {
   if (selected < 0) setSelected(options.length - 1);
 
   if (selected >= options.length) setSelected(0);
+  console.log(choice)
   return (
     <Box
       sx={{
@@ -58,6 +61,7 @@ export const Selector: FC<Props> = ({ setContent }) => {
         <Button
           onClick={() => {
             setSelected(selected - 1);
+            setChoice(textVariants.current)
           }}
           sx={{ border: "solid 1px black", width: "14vh", color: "black" }}
         >
@@ -69,11 +73,12 @@ export const Selector: FC<Props> = ({ setContent }) => {
           <Typography
             component={motion.p}
             initial={textVariants.last}
+            animate={choice}
             transition={{type: "spring", stiffness: 100}}
             sx={{
               fontSize: { lg:12, sm:7 },
               letterSpacing: 3,
-              fontWeight: "500",  
+              fontWeight: "500",
             }}
           >
             {options[selected - 2] || options[options.length + (selected - 2)]}
