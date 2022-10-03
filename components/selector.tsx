@@ -9,24 +9,36 @@ type Props = {
   setContent: any;
 };
 
-const textVariants = {
-  last: {
-    filter: "blur(1.5px)",
-    color:'#CDCDCD',
-  }, 
-  next: {
-    filter: "blur(1px)",
-    color:'#787878',
-  },
-  current: {
-    filter: "blur(0px)",
-    color:'black',
-  }
-}
+// const textVariants = {
+//   upUp: {
+//     filter: "blur(1.5px)",
+//     color:'#CDCDCD',
+//     y:0
+//   }, 
+//   upMiddle: {
+//     filter: "blur(1px)",
+//     color:'#787878',
+//     y:0
+//   },
+//   current: {
+//     filter: "blur(0px)",
+//     color:'black',
+//     y:0
+//   },
+//   downMiddle: {
+//     filter: "blur(1px)",
+//     color:'#787878',
+//     y:0
+//   },
+//   downDown: {
+//     filter: "blur(1.5px)",
+//     color:'#CDCDCD',
+//     y:0
+//   }
+// }
 
 export const Selector: FC<Props> = ({ setContent }) => {
   const [selected, setSelected] = useState(2);
-  const [choice, setChoice] = useState(textVariants.last);
   
   const options = [
     "RECOMMENDATIONS",
@@ -36,6 +48,14 @@ export const Selector: FC<Props> = ({ setContent }) => {
     "ILLUSTRATIONS",
   ];
 
+  // const styles = [
+  //   {...textVariants.upUp},
+  //   {...textVariants.upMiddle},
+  //   {...textVariants.current},
+  //   {...textVariants.downMiddle},
+  //   {...textVariants.downDown}
+  // ]
+
   useEffect(() => {
     setContent(options[selected]);
   });
@@ -43,7 +63,6 @@ export const Selector: FC<Props> = ({ setContent }) => {
   if (selected < 0) setSelected(options.length - 1);
 
   if (selected >= options.length) setSelected(0);
-  console.log(choice)
   return (
     <Box
       sx={{
@@ -61,7 +80,11 @@ export const Selector: FC<Props> = ({ setContent }) => {
         <Button
           onClick={() => {
             setSelected(selected - 1);
-            setChoice(textVariants.current)
+            // textVariants.upUp.y -= 45;
+            // textVariants.upMiddle.y -= 45;
+            // textVariants.current.y -= 45;
+            // textVariants.downMiddle.y -= 45;
+            // textVariants.downDown.y -= 145;
           }}
           sx={{ border: "solid 1px black", width: "14vh", color: "black" }}
         >
@@ -69,13 +92,15 @@ export const Selector: FC<Props> = ({ setContent }) => {
         </Button>
       </Container>
 
-      <Container sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
+      <Container sx={{ display: "flex", flexDirection: "column", gap: 2.5, maxHeight:"150px", position:"initial"}}>
           <Typography
-            component={motion.p}
-            initial={textVariants.last}
-            animate={choice}
-            transition={{type: "spring", stiffness: 100}}
+            // component={motion.p}
+            // initial={textVariants.upUp}
+            // animate={styles[0]}
+            // transition={{type: "spring", stiffness: 100}}
             sx={{
+              filter: "blur(1.5px)",
+              color:'#CDCDCD',
               fontSize: { lg:12, sm:7 },
               letterSpacing: 3,
               fontWeight: "500",
@@ -85,10 +110,13 @@ export const Selector: FC<Props> = ({ setContent }) => {
           </Typography>
 
           <Typography
-            component={motion.p}
-            initial={textVariants.next}
-            transition={{type: "spring", stiffness: 100}}
+            // component={motion.p}
+            // initial={textVariants.upMiddle}
+            // animate={styles[1]}
+            // transition={{type: "spring", stiffness: 100}}
             sx={{
+              filter: "blur(1px)",
+              color:'#787878',
               fontSize: { lg:17, sm:9 },
               letterSpacing: 3,
               fontWeight: "600",  
@@ -98,10 +126,13 @@ export const Selector: FC<Props> = ({ setContent }) => {
           </Typography>
 
           <Typography
-            component={motion.p}
-            initial={textVariants.current}
-            transition={{type: "spring", stiffness: 100}}
+            // component={motion.p}
+            // initial={textVariants.current}
+            // animate={styles[2]}
+            // transition={{type: "spring", stiffness: 100}}
             sx={{
+                filter: "blur(0px)",
+                color:'black',
                 fontSize: { lg:22, sm:16 },
                 letterSpacing: 3,
                 fontWeight: "700",  
@@ -111,10 +142,13 @@ export const Selector: FC<Props> = ({ setContent }) => {
           </Typography>
 
           <Typography
-          component={motion.p}
-          initial={textVariants.next}
-          transition={{type: "spring", stiffness: 100}}
+          // component={motion.p}
+          // initial={textVariants.downMiddle}
+          // animate={styles[3]}
+          // transition={{type: "spring", stiffness: 100}}
             sx={{
+              filter: "blur(1px)",
+              color:'#787878',
               fontSize: { lg:17, sm:9 },
               letterSpacing: 3,
               fontWeight: "600",  
@@ -124,10 +158,13 @@ export const Selector: FC<Props> = ({ setContent }) => {
           </Typography>
 
           <Typography
-          component={motion.p}
-          initial={textVariants.last}
-          transition={{type: "spring", stiffness: 100}}
+          // component={motion.p}
+          // initial={textVariants.downDown}
+          // animate={styles[4]}
+          // transition={{type: "spring", stiffness: 100}}
             sx={{
+              filter: "blur(1.5px)",
+              color:'#CDCDCD',
               fontSize: { lg:12, sm:7 },
               letterSpacing: 3,
               fontWeight: "500",  
