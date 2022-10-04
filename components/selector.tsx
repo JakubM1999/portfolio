@@ -38,7 +38,7 @@ type Props = {
 // }
 
 export const Selector: FC<Props> = ({ setContent }) => {
-  const [selected, setSelected] = useState(2);
+  const [selected, setSelected] = useState(0);
   
   const options = [
     "RECOMMENDATIONS",
@@ -92,7 +92,7 @@ export const Selector: FC<Props> = ({ setContent }) => {
         </Button>
       </Container>
 
-      <Container sx={{ display: "flex", flexDirection: "column", gap: 2.5, maxHeight:"150px", position:"initial"}}>
+      <Container sx={{ display: "flex", flexDirection: "column", gap: 2.5, m:1}}>
           <Typography
             // component={motion.p}
             // initial={textVariants.upUp}

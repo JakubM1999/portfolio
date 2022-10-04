@@ -1,6 +1,8 @@
 import React from 'react'
 import {Avatar, Grid, Box, Typography} from '@mui/material'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+import avatarPic from '../../images/sendiradid.png'
 
 const avatarAnim = {
     before: {
@@ -35,13 +37,14 @@ export const SendiradidRecommendation = () => {
     return (
         <Grid container xs={12}>
         <Grid container item sx={{ alignItems: "center", gap: 3 }}>
-          <Avatar
+          <Box
           component={motion.div}
           initial={avatarAnim.before}
           animate={avatarAnim.after}
             sx={{ width: "8vh", height: "auto" }}
-            src="https://github.com/JakubM1999/portfolio/blob/main/images/sendiradid.png?raw=true"
-          />
+          >
+            <Image alt='sendiradid' src={avatarPic} style={{borderRadius:'100px'}} layout='responsive'/>
+          </Box>
           <Box
           component={motion.div}
           initial={titleAnim.before}
