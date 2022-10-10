@@ -10,7 +10,7 @@ import { Recommendations } from "./recommendations"
 import { Illustrations } from "./illustrations"
 
 export const Layout = () => {
-    const [content, setContent] = useState('ILLUSTRATIONS');
+    const [content, setContent] = useState('ABOUT');
 
     return (
         <Grid container item xs={12} >

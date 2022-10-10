@@ -1,6 +1,8 @@
 import React from 'react'
 import {Avatar, Grid, Box, Typography} from '@mui/material'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+import avatarPic from '../../images/tskoli.png'
 
 const avatarAnim = {
     before: {
@@ -60,7 +62,7 @@ export const SmariRecommendation = () => {
               Teacher at Vefskóli
             </Typography>
           </Box>
-          <Avatar
+          <Box
           transition={{ delay: 0.4}}
           component={motion.div}
           initial={avatarAnim.before}
@@ -69,10 +71,12 @@ export const SmariRecommendation = () => {
               width: "8vh",
               height: "auto",
               p: 1,
+              borderRadius:'100px',
               border: "solid 0.5px lightGrey",
             }}
-            src="https://github.com/JakubM1999/portfolio/blob/main/images/tskoli.png?raw=true"
-          />
+            >
+              <Image layout="responsive" style={{borderRadius:'100px'}} alt='smari' src={avatarPic}/>
+          </Box>
         </Grid>
         <Grid
             transition={{ delay: 0.9}}

@@ -1,6 +1,8 @@
 import React from 'react'
 import {Avatar, Grid, Box, Typography} from '@mui/material'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+import avatarPic from '../../images/kaiser.png'
 
 const avatarAnim = {
     before: {
@@ -35,7 +37,7 @@ export const KaiserRecommendation = () => {
     return (
         <Grid container xs={12}>
         <Grid container item sx={{ alignItems: "center", gap: 3 }}>
-          <Avatar
+          <Box
             transition={{ delay: 1.2}}
             component={motion.div}
             initial={avatarAnim.before}
@@ -44,10 +46,12 @@ export const KaiserRecommendation = () => {
               width: "8vh",
               height: "auto",
               p: 1,
+              borderRadius:'100px',
               border: "solid 0.5px lightGrey",
             }}
-            src="https://github.com/JakubM1999/portfolio/blob/main/images/kaiser.png?raw=true"
-          />
+            >
+              <Image alt='kaiser' layout='responsive' style={{borderRadius:'100px'}} src={avatarPic}/>
+            </Box>
           <Box 
           transition={{delay: 1.4}}
           component={motion.div}

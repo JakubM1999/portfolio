@@ -8,18 +8,12 @@ interface Props {
   image: any;
   buttonColor: String;
   buttonBorder: String;
-  description: String;
-//   link: String[];
-//   linkName: String;
 }
 
 export const InnerProjectLayout: FC<Props> = ({
   image,
   buttonColor,
   buttonBorder,
-  description,
-//   link,
-//   linkName,
 }) => {
 
     const Router = useRouter();
@@ -47,16 +41,6 @@ export const InnerProjectLayout: FC<Props> = ({
         <Box sx={{ width: "100vh", position: "absolute", zIndex: 1 }}>
           <Image alt="projects banner" src={image} />
         </Box>
-      </Grid>
-      <Grid item xs={8}>
-          <Typography variant='h5' sx={{fontWeight:'700', mt:10, ml:10}}>Projects description</Typography>
-          <Typography variant='body1' sx={{fontWeight:'400',mt:5, ml:10}}>{description}</Typography>
-      </Grid>
-      <Grid item xs={4}>
-          <Typography variant='h5' sx={{fontWeight:'700', mt:10}}>Projects Links</Typography>
-          <List sx={{mt:5}}>
-            {/* <a href={link}>{linkName}</a> */}
-          </List>
       </Grid>
     </Grid>
   );
