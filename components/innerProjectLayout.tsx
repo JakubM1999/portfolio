@@ -6,12 +6,16 @@ import { useRouter } from "next/router";
 
 interface Props {
   image: any;
+  bannerColor: String;
+  bannerBorder: String;
   buttonColor: String;
   buttonBorder: String;
 }
 
 export const InnerProjectLayout: FC<Props> = ({
   image,
+  bannerColor,
+  bannerBorder,
   buttonColor,
   buttonBorder,
 }) => {
@@ -22,22 +26,21 @@ export const InnerProjectLayout: FC<Props> = ({
     <Grid container>
       <Grid>
         <Button
-          onClick={()=>{Router.push('../')}}  
-          variant="outlined"
+          onClick={()=>{Router.push('../')}} 
           sx={{
             position: "absolute",
             zIndex: 2,
-            justifyContent: "left",
+            justifyContent: "center",
             color: `${buttonColor}`,
             border: `${buttonBorder}`,
-            m:5
+            m:5,
           }}
         >
           BACK
         </Button>
       </Grid>
-      <Grid container item xs={12} sx={{ justifyContent: "center" }}>
-        <Box sx={{ width: "100%", bgcolor: "#0B1420", height: "24.3vh" }} />
+      <Grid container item xs={12} sx={{ justifyContent: "center", borderBottom:`${bannerBorder}` }}>
+        <Box sx={{ width: "100%", bgcolor: `${bannerColor}`, height: "24.3vh" }} />
         <Box sx={{ width: "100vh", position: "absolute", zIndex: 1 }}>
           <Image alt="projects banner" src={image} />
         </Box>
