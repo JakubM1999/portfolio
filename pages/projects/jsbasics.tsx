@@ -1,11 +1,99 @@
-import React from "react"
+import React from "react";
+import { InnerProjectLayout } from "../../components/innerProjectLayout";
+import JSBasicsBanner from "../../images/InnerProjectImgs/jsbasicsbanner.png";
+import { Grid, Typography, Button, Divider } from "@mui/material";
+import { Box } from "@mui/system";
+import { Code, DesignServices, Commit } from "@mui/icons-material";
 
 const JsBasics = () => {
     return (
-        <div>
-            hello JsBasics
-        </div>
-    )
+        <Grid container item xs={12}>
+          <InnerProjectLayout
+            image={JSBasicsBanner}
+            bannerColor={"black"}
+            bannerBorder={"none"}
+            buttonColor={"white"}
+            buttonBorder={"solid 0.5px white"}
+          />
+          <Grid container item xs={12} justifyContent="space-between">
+            <Grid
+              container
+              item
+              xs={10}
+              justifyContent="flex-start"
+            >
+              <Typography>What is it about?</Typography>
+            </Grid>
+            <Grid
+              item
+              container
+              xs={1}
+              justifyContent="center"
+              alignItems="center"
+              sx={{ height: "calc(100vh - 24.3vh)" }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  position: "fixed",
+                  flexDirection: "column",
+                  gap: "1.5vh",
+                  alignItems:'center'
+                }}
+              >
+    
+                <Box sx={{ display: "flex", flexDirection: "column", textAlign:'center'}}>
+                  <a href={"https://github.com/JakubM1999/Javascript-Forms"}>
+                    <Button
+                      sx={{
+                        color: "black",
+                        fontSize: "6.5vh",
+                        borderRadius: "999px",
+                      }}
+                    >
+                      <Code fontSize="inherit" />
+                    </Button>
+                    <Typography
+                      sx={{
+                        fontSize: { xl: "13px", lg: "8px" },
+                        fontStyle: "italic",
+                        mb:'2vh'
+                      }}
+                    >
+                      Project Repository
+                    </Typography>
+                  </a>
+                </Box>
+    
+                <Divider flexItem sx={{bgcolor:'darkgrey', width:'10vh'}}/>
+    
+                <Box sx={{ display: "flex", flexDirection: "column", textAlign:'center'}}>
+                  <a href={"https://github.com/JakubM1999/Javascript-Forms/commit/81e7deb146d4a7e425328ef3b68b06cb3b21926a"}>
+                    <Button
+                      sx={{
+                        color: "black",
+                        fontSize: "6.5vh",
+                        borderRadius: "999px",
+                      }}
+                    >
+                      <Commit fontSize="inherit" />
+                    </Button>
+                    <Typography
+                      sx={{
+                        fontSize: { xl: "13px", lg: "8px" },
+                        fontStyle: "italic",
+                      }}
+                    >
+                      My Commit
+                    </Typography>
+                  </a>
+                </Box>
+    
+              </Box>
+            </Grid>
+          </Grid>
+        </Grid>
+      );
 }
 
 export default JsBasics

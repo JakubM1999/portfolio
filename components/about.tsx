@@ -35,7 +35,7 @@ export const About = () => {
                />
       </Box>
       <Container sx={{display:'flex', flexDirection:'column', gap: 1.5, width:'70vh', mb:3}}>
-        <Typography sx={{fontSize:{lg:'3.5rem', sm:'2rem'}}} >Hey</Typography>
+        <Typography sx={{fontSize:{lg:'56px', sm:'32px'}}} >Hello</Typography>
         <Typography color='grey.800' sx={{fontSize:{lg:'18px', sm:'11px'}}} >
           My career started as I wanted to become graphic designer since from
           young age I was good at drawing, I was very motivated after first
